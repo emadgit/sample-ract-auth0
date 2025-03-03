@@ -18,12 +18,11 @@ const onRedirectCallback = (appState) => {
 const config = getConfig();
 
 const providerConfig = {
-  domain: config.domain,
+  domain: "fenaco-sandbox.eu.auth0.com",
   clientId: "AuAcHbf5rE87bATB8CpyAKZlXyOnTuDq",
   onRedirectCallback,
   authorizationParams: {
-    redirect_uri: window.location.origin,
-    ...(config.audience ? { audience: config.audience } : null),
+    redirect_uri: window.location.origin
   },
 };
 
